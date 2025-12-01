@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instituto Kronos de Estudos Estratégicos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Think tank independente focado em Segurança Pública, Defesa e Estudos de Futuro."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-50 antialiased">
+  <!-- NAVBAR -->
+  <header
+    class="fixed top-0 inset-x-0 z-30 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur"
+  >
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-xl bg-indigo-500 flex items-center justify-center text-xs font-semibold tracking-wider">
+          IK
+        </div>
+        <span class="text-sm sm:text-base font-semibold tracking-wide">
+          Instituto Kronos
+        </span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
+        <a href="#inicio" class="hover:text-white transition-colors">Início</a>
+        <a href="#quem-somos" class="hover:text-white transition-colors">Quem somos</a>
+        <a href="#areas" class="hover:text-white transition-colors">Áreas</a>
+        <a href="#observatorios" class="hover:text-white transition-colors">Observatórios</a>
+        <a href="#produtos" class="hover:text-white transition-colors">Produtos</a>
+        <a href="#contato" class="hover:text-white transition-colors">Contato</a>
+      </nav>
+      <a
+        href="#contato"
+        class="hidden sm:inline-flex items-center justify-center rounded-full border border-indigo-400/80 px-4 py-1.5 text-xs font-semibold text-indigo-100 shadow-sm hover:bg-indigo-500/10 transition-colors"
+      >
+        Receber briefings
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- HERO -->
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.25),_transparent_55%)] opacity-70"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="uppercase text-[10px] tracking-[0.25em] text-indigo-300/70 mb-3">
+              think tank · segurança · defesa · futuros
+            </p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50">
+              Inteligência estratégica para um
+              <span class="text-indigo-300">futuro seguro</span>.
+            </h1>
+            <p class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+              O <span class="font-semibold text-slate-100">Instituto Kronos</span> é um think tank
+              independente dedicado à análise de <span class="font-medium">Segurança Pública</span>,
+              <span class="font-medium">Defesa</span> e <span class="font-medium">Estudos do Futuro</span>.
+              Produzimos inteligência aplicada para antecipar riscos, interpretar tendências e apoiar tomada de decisão.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#produtos"
+                class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition-colors"
+              >
+                Ver produtos & dossiês
+              </a>
+              <a
+                href="#quem-somos"
+                class="inline-flex items-center justify-center rounded-full border border-slate-600 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-100 hover:border-slate-300 hover:text-white transition-colors"
+              >
+                Entender a proposta
+              </a>
+            </div>
+            <div class="mt-8 grid grid-cols-3 gap-4 text-xs text-slate-300">
+              <div>
+                <p class="text-lg font-semibold text-slate-50">3</p>
+                <p class="mt-1">Eixos principais: Segurança, Defesa e Futuros.</p>
+              </div>
+              <div>
+                <p class="text-lg font-semibold text-slate-50">OSINT</p>
+                <p class="mt-1">Foco em dados abertos, metodologia rigorosa.</p>
+              </div>
+              <div>
+                <p class="text-lg font-semibold text-slate-50">Brasil</p>
+                <p class="mt-1">Olhar brasileiro, diálogo com o cenário global.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD LATERAL -->
+          <div class="md:pl-6">
+            <div class="relative rounded-3xl border border-slate-800 bg-slate-900/50 p-5 sm:p-6 lg:p-7 shadow-[0_18px_45px_rgba(15,23,42,0.9)]">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] uppercase tracking-[0.18em] text-slate-400">
+                  Radar estratégico · 2025
+                </span>
+                <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-200 border border-indigo-500/40">
+                  beta
+                </span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Panorama sintético de risco para os próximos 12 meses, combinando:
+              </p>
+              <ul class="space-y-2 text-xs text-slate-200">
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-400"></span>
+                  Dinâmica de violência urbana em grandes centros.
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Tendências de governança criminal e territórios em disputa.
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                  Cenários de pressão sobre forças de segurança e instituições.
+                </li>
+              </ul>
+              <div class="mt-5 border-t border-slate-800 pt-4 flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] text-slate-400">Acesso antecipado</p>
+                  <p class="text-xs font-medium text-slate-100">
+                    Briefing mensal exclusivo (PDF · 8–12 páginas)
+                  </p>
+                </div>
+                <a
+                  href="#contato"
+                  class="inline-flex items-center rounded-full border border-slate-600 px-3 py-1.5 text-[11px] font-semibold text-slate-100 hover:border-indigo-400 hover:text-indigo-100 transition-colors"
+                >
+                  Participar da lista
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="quem-somos" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-[1.2fr,1fr] gap-10 items-start">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              quem somos
+            </h2>
+            <p class="mt-3 text-2xl sm:text-3xl font-semibold text-slate-50">
+              Um think tank independente focado em segurança, defesa e futuros.
+            </p>
+            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+              O <span class="font-medium">Instituto Kronos</span> nasce com o objetivo de
+              produzir <span class="font-medium">inteligência estratégica aplicada</span> a
+              problemas concretos de segurança pública e defesa, a partir de uma visão de
+              <span class="font-medium">longo prazo</span> e de estudos de futuro.
+            </p>
+            <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+              Operamos como ponte entre academia, formuladores de política pública,
+              imprensa especializada e sociedade civil, oferecendo análises profundas,
+              visualizações claras e produtos que cabem na rotina de quem decide.
+            </p>
+            <div class="mt-6 grid sm:grid-cols-3 gap-4 text-xs text-slate-200">
+              <div class="border border-slate-800 rounded-2xl p-3 bg-slate-900/40">
+                <p class="text-[11px] font-semibold text-slate-400 mb-1">
+                  Missão
+                </p>
+                <p>Produzir inteligência independente sobre segurança, defesa e futuros.</p>
+              </div>
+              <div class="border border-slate-800 rounded-2xl p-3 bg-slate-900/40">
+                <p class="text-[11px] font-semibold text-slate-400 mb-1">
+                  Visão
+                </p>
+                <p>Ser referência brasileira em prospectiva aplicada à segurança pública.</p>
+              </div>
+              <div class="border border-slate-800 rounded-2xl p-3 bg-slate-900/40">
+                <p class="text-[11px] font-semibold text-slate-400 mb-1">
+                  Valores
+                </p>
+                <p>Rigor, independência, transparência e inovação metodológica.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-5 sm:p-6">
+            <p class="text-xs font-semibold text-slate-400 tracking-[0.18em] uppercase mb-3">
+              eixos de atuação
+            </p>
+            <ul class="space-y-3 text-xs text-slate-200">
+              <li class="flex gap-3">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-400"></span>
+                <span>
+                  <span class="font-medium">Segurança Pública</span> – crime organizado,
+                  governança criminal, territórios e dinâmicas de violência urbana.
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                <span>
+                  <span class="font-medium">Defesa & Estratégia</span> – ameaças híbridas,
+                  guerra irregular, capacidade estatal e integração civil-militar.
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                <span>
+                  <span class="font-medium">Estudos do Futuro</span> – prospectiva, análise de
+                  cenários, simulação de tendências e stress testing institucional.
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-fuchsia-400"></span>
+                <span>
+                  <span class="font-medium">Tecnologia & OSINT</span> – uso de dados abertos,
+                  IA, geointeligência e visualização de informação para decisões rápidas.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950/95">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              áreas de pesquisa
+            </h2>
+            <p class="mt-2 text-2xl font-semibold text-slate-50">
+              Onde concentramos nossa atenção.
+            </p>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-md">
+            Cada área é estruturada como um eixo contínuo de monitoramento, com produção de
+            relatórios, notas técnicas e visualizações dedicadas.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4 sm:gap-5">
+          <!-- Card 1 -->
+          <div class="group border border-slate-800 rounded-3xl bg-slate-900/40 p-4 sm:p-5 hover:-translate-y-1 hover:border-indigo-500/70 hover:bg-slate-900/70 transition-all">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              01 · segurança pública
+            </p>
+            <p class="text-sm font-medium text-slate-50 mb-2">
+              Violência urbana & governança criminal
+            </p>
+            <p class="text-xs text-slate-300 mb-3">
+              Análise de dinâmicas criminais, disputas territoriais, indicadores de violência
+              e respostas estatais.
+            </p>
+            <ul class="text-[11px] text-slate-400 space-y-1">
+              <li>• facções e territórios</li>
+              <li>• mercados ilícitos</li>
+              <li>• impacto sobre civis</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group border border-slate-800 rounded-3xl bg-slate-900/40 p-4 sm:p-5 hover:-translate-y-1 hover:border-indigo-500/70 hover:bg-slate-900/70 transition-all">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              02 · defesa & estratégia
+            </p>
+            <p class="text-sm font-medium text-slate-50 mb-2">
+              Ameaças híbridas & poder nacional
+            </p>
+            <p class="text-xs text-slate-300 mb-3">
+              Integração entre segurança interna, defesa externa e desafios de guerra
+              irregular no século XXI.
+            </p>
+            <ul class="text-[11px] text-slate-400 space-y-1">
+              <li>• guerras assimétricas</li>
+              <li>• pressão sobre instituições</li>
+              <li>• cenários de crise</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group border border-slate-800 rounded-3xl bg-slate-900/40 p-4 sm:p-5 hover:-translate-y-1 hover:border-indigo-500/70 hover:bg-slate-900/70 transition-all">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              03 · futuros & prospectiva
+            </p>
+            <p class="text-sm font-medium text-slate-50 mb-2">
+              Cenários, tendências & antecipação
+            </p>
+            <p class="text-xs text-slate-300 mb-3">
+              Construção de cenários, identificação de sinais fracos e testes de
+              resiliência institucional frente a choques.
+            </p>
+            <ul class="text-[11px] text-slate-400 space-y-1">
+              <li>• foresight aplicado</li>
+              <li>• matrizes de risco</li>
+              <li>• horizontes de 5–20 anos</li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="group border border-slate-800 rounded-3xl bg-slate-900/40 p-4 sm:p-5 hover:-translate-y-1 hover:border-indigo-500/70 hover:bg-slate-900/70 transition-all">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              04 · tecnologia & osint
+            </p>
+            <p class="text-sm font-medium text-slate-50 mb-2">
+              Dados abertos, IA & geointeligência
+            </p>
+            <p class="text-xs text-slate-300 mb-3">
+              Coleta, limpeza e análise de dados a partir de fontes abertas, aliadas a
+              modelos de IA e mapas interativos.
+            </p>
+            <ul class="text-[11px] text-slate-400 space-y-1">
+              <li>• scraping & APIs</li>
+              <li>• mapas interativos</li>
+              <li>• dashboards táticos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBSERVATÓRIOS -->
+    <section id="observatorios" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              observatórios
+            </h2>
+            <p class="mt-2 text-2xl font-semibold text-slate-50">
+              Monitoração contínua, não só relatórios pontuais.
+            </p>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-md">
+            Cada observatório combina dados, análises e narrativas visuais para oferecer
+            um quadro inteligível de fenômenos complexos.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+          <!-- Obs 1 -->
+          <article class="border border-slate-800 rounded-3xl bg-slate-900/50 p-5 flex flex-col">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              observatório · 01
+            </p>
+            <h3 class="text-sm font-semibold text-slate-50 mb-2">
+              Observatório de Segurança Pública
+            </h3>
+            <p class="text-xs text-slate-300 mb-4">
+              Monitoramento de indicadores de violência, operações policiais e impactos
+              sobre populações vulneráveis em grandes centros urbanos.
+            </p>
+            <div class="mt-auto flex items-center justify-between pt-3 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400">
+                Painel interativo – <span class="text-slate-100">em desenvolvimento</span>
+              </p>
+              <button
+                class="text-[11px] font-semibold text-indigo-300 hover:text-indigo-200"
+                type="button"
+              >
+                Ver prévia
+              </button>
+            </div>
+          </article>
+
+          <!-- Obs 2 -->
+          <article class="border border-slate-800 rounded-3xl bg-slate-900/50 p-5 flex flex-col">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              observatório · 02
+            </p>
+            <h3 class="text-sm font-semibold text-slate-50 mb-2">
+              Observatório de Guerra Irregular & Governança Criminal
+            </h3>
+            <p class="text-xs text-slate-300 mb-4">
+              Acompanha a evolução de atores armados não estatais, disputas por
+              territórios e formas de governança paralela e híbrida.
+            </p>
+            <div class="mt-auto flex items-center justify-between pt-3 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400">
+                Dossiês trimestrais – <span class="text-slate-100">piloto 2025</span>
+              </p>
+              <button
+                class="text-[11px] font-semibold text-indigo-300 hover:text-indigo-200"
+                type="button"
+              >
+                Solicitar sumário
+              </button>
+            </div>
+          </article>
+
+          <!-- Obs 3 -->
+          <article class="border border-slate-800 rounded-3xl bg-slate-900/50 p-5 flex flex-col">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              observatório · 03
+            </p>
+            <h3 class="text-sm font-semibold text-slate-50 mb-2">
+              Observatório de Futuros em Segurança & Defesa
+            </h3>
+            <p class="text-xs text-slate-300 mb-4">
+              Produção de cenários, identificação de tendências e análise de impactos
+              futuros sobre segurança pública e defesa nacional.
+            </p>
+            <div class="mt-auto flex items-center justify-between pt-3 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400">
+                Briefings – <span class="text-slate-100">assinatura fechada</span>
+              </p>
+              <button
+                class="text-[11px] font-semibold text-indigo-300 hover:text-indigo-200"
+                type="button"
+              >
+                Falar com o instituto
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950/95">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              produtos & entregáveis
+            </h2>
+            <p class="mt-2 text-2xl font-semibold text-slate-50">
+              Inteligência em formatos que cabem na rotina.
+            </p>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-md">
+            Do policy brief de 2 páginas ao dossiê aprofundado, o foco é sempre clareza,
+            síntese e base empírica sólida.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-[1.3fr,1fr] gap-6">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4 flex flex-col">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+                relatórios estratégicos
+              </p>
+              <p class="text-sm font-medium text-slate-50 mb-2">
+                Dossiês setoriais
+              </p>
+              <p class="text-xs text-slate-300 mb-3">
+                Análises aprofundadas, com contexto histórico, leitura de atores, dados e
+                cenários prospectivos.
+              </p>
+              <p class="mt-auto text-[11px] text-slate-400">
+                Formato: 30–60 páginas · PDF
+              </p>
+            </div>
+
+            <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4 flex flex-col">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+                policy briefs
+              </p>
+              <p class="text-sm font-medium text-slate-50 mb-2">
+                Notas técnicas rápidas
+              </p>
+              <p class="text-xs text-slate-300 mb-3">
+                Síntese para decisores: problema, diagnóstico, cenários e recomendações em
+                até 2–4 páginas.
+              </p>
+              <p class="mt-auto text-[11px] text-slate-400">
+                Formato: 2–4 páginas · PDF
+              </p>
+            </div>
+
+            <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4 flex flex-col">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+                mapas & dashboards
+              </p>
+              <p class="text-sm font-medium text-slate-50 mb-2">
+                Visualizações dinâmicas
+              </p>
+              <p class="text-xs text-slate-300 mb-3">
+                Mapas interativos, painéis de indicadores e visualizações de redes,
+                acessíveis via web.
+              </p>
+              <p class="mt-auto text-[11px] text-slate-400">
+                Formato: acesso web autenticado
+              </p>
+            </div>
+
+            <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4 flex flex-col">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+                briefings
+              </p>
+              <p class="text-sm font-medium text-slate-50 mb-2">
+                Atualizações recorrentes
+              </p>
+              <p class="text-xs text-slate-300 mb-3">
+                Sumários periódicos por e-mail, com leitura rápida e links para aprofundamento.
+              </p>
+              <p class="mt-auto text-[11px] text-slate-400">
+                Formato: e-mail · PDF curto
+              </p>
+            </div>
+          </div>
+
+          <!-- Bloco lateral de chamada -->
+          <aside class="border border-indigo-500/60 rounded-3xl bg-gradient-to-br from-indigo-500/20 via-slate-900 to-slate-950 p-5 flex flex-col justify-between">
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-200 mb-2">
+                mvp · oferta inicial
+              </p>
+              <p class="text-sm font-semibold text-slate-50 mb-2">
+                Radar estratégico para segurança pública em grandes centros urbanos.
+              </p>
+              <p class="text-xs text-slate-100/90 mb-3">
+                Produto piloto focado em cenários de curto e médio prazo (12–24 meses),
+                combinando dados, análise qualitativa e insights acionáveis.
+              </p>
+              <ul class="text-[11px] text-slate-100/80 space-y-1 mb-4">
+                <li>• atualização trimestral</li>
+                <li>• resumo executivo + anexos de dados</li>
+                <li>• sessão de apresentação remota (opcional)</li>
+              </ul>
+            </div>
+            <a
+              href="#contato"
+              class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-[11px] font-semibold text-white mt-2 hover:bg-indigo-400 transition-colors"
+            >
+              Conversar sobre o Radar Estratégico
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section id="metodologia" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              metodologia
+            </h2>
+            <p class="mt-2 text-2xl font-semibold text-slate-50">
+              Do dado bruto ao cenário estratégico.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4 text-xs text-slate-200">
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              etapa 01
+            </p>
+            <p class="font-medium mb-1">Coleta & OSINT</p>
+            <p class="text-slate-300">
+              Scraping, APIs, bases públicas, relatórios oficiais, academia, imprensa
+              especializada e fontes abertas qualificadas.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              etapa 02
+            </p>
+            <p class="font-medium mb-1">Tratamento & análise</p>
+            <p class="text-slate-300">
+              Limpeza, cruzamento de dados, construção de indicadores e uso de modelos
+              estatísticos e qualitativos.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              etapa 03
+            </p>
+            <p class="font-medium mb-1">Cenários & foresight</p>
+            <p class="text-slate-300">
+              Construção de cenários, identificação de sinais fracos, riscos emergentes e
+              oportunidades.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/50 p-4">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 mb-2">
+              etapa 04
+            </p>
+            <p class="font-medium mb-1">Síntese & comunicação</p>
+            <p class="text-slate-300">
+              Transformação da análise em produtos claros: relatórios, dashboards,
+              briefings e apresentações.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO / NEWSLETTER -->
+    <section id="contato" class="py-14 sm:py-16 border-t border-slate-900/60 bg-slate-950/95">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1.1fr,1fr] gap-8 items-start">
+          <div>
+            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400">
+              contato & briefings
+            </h2>
+            <p class="mt-2 text-2xl font-semibold text-slate-50">
+              Quer receber os primeiros materiais do instituto?
+            </p>
+            <p class="mt-3 text-sm text-slate-300 max-w-xl">
+              Estamos estruturando os produtos iniciais do <span class="font-medium">Instituto Kronos</span>.
+              Se você atua em segurança pública, defesa, imprensa ou pesquisa e quer acompanhar as
+              primeiras entregas, deixe seu contato.
+            </p>
+            <ul class="mt-5 text-xs text-slate-300 space-y-2">
+              <li>• Briefing mensal em PDF com panorama sintético.</li>
+              <li>• Convites para dashboards piloto e painéis experimentais.</li>
+              <li>• Chamadas para participar de grupos fechados de discussão.</li>
+            </ul>
+          </div>
+
+          <!-- Formulário -->
+          <div class="border border-slate-800 rounded-3xl bg-slate-900/60 p-5 sm:p-6">
+            <form class="space-y-4">
+              <div>
+                <label for="nome" class="block text-xs font-medium text-slate-200 mb-1">
+                  Nome
+                </label>
+                <input
+                  id="nome"
+                  type="text"
+                  placeholder="Seu nome completo"
+                  class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-medium text-slate-200 mb-1">
+                  E-mail profissional
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="voce@instituicao.com"
+                  class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label for="instituicao" class="block text-xs font-medium text-slate-200 mb-1">
+                  Instituição / atuação
+                </label>
+                <input
+                  id="instituicao"
+                  type="text"
+                  placeholder="Órgão público, universidade, imprensa, etc."
+                  class="w-full rounded-2xl border border-slate-700 bg-slate-950/60 px-3 py-2 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-200 mb-1">
+                  Interesses principais
+                </label>
+                <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-200">
+                  <label class="inline-flex items-center gap-1.5">
+                    <input type="checkbox" class="rounded border-slate-600 bg-slate-900 text-indigo-500" />
+                    Segurança Pública
+                  </label>
+                  <label class="inline-flex items-center gap-1.5">
+                    <input type="checkbox" class="rounded border-slate-600 bg-slate-900 text-indigo-500" />
+                    Defesa & Estratégia
+                  </label>
+                  <label class="inline-flex items-center gap-1.5">
+                    <input type="checkbox" class="rounded border-slate-600 bg-slate-900 text-indigo-500" />
+                    Futuros & Cenários
+                  </label>
+                  <label class="inline-flex items-center gap-1.5">
+                    <input type="checkbox" class="rounded border-slate-600 bg-slate-900 text-indigo-500" />
+                    Mapas & Dashboards
+                  </label>
+                </div>
+              </div>
+              <div class="pt-1">
+                <button
+                  type="submit"
+                  class="w-full inline-flex items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-indigo-500/30 hover:bg-indigo-400 transition-colors"
+                >
+                  Entrar na lista de briefings
+                </button>
+                <p class="mt-2 text-[10px] text-slate-500">
+                  Não enviaremos spam. Você poderá sair da lista a qualquer momento.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="border-t border-slate-900 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <div class="text-[11px] text-slate-500">
+        © <span id="ano-atual"></span> Instituto Kronos de Estudos Estratégicos. Think tank
+        independente em segurança pública, defesa e futuros.
+      </div>
+      <div class="flex flex-wrap gap-4 text-[11px] text-slate-400">
+        <a href="#quem-somos" class="hover:text-slate-200">Sobre</a>
+        <a href="#produtos" class="hover:text-slate-200">Produtos</a>
+        <a href="#contato" class="hover:text-slate-200">Contato</a>
+        <span class="text-slate-600">·</span>
+        <span class="text-slate-500">Versão MVP</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano automaticamente
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
