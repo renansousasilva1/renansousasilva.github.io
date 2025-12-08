@@ -3,88 +3,785 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site – GitHub Pages</title>
+    <title>Think Tank | Futuros em Segurança e Defesa</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
-
-        /* Navbar */
-        nav {
-            background: #111;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
+            background-color: #111;
             color: #fff;
-            font-weight: bold;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar-custom {
+            background-color: #000;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            width: 35px;
+        }
+
+        /* SIDEBAR */
+        #sidebar {
+            height: 100vh;
+            width: 260px;
+            position: fixed;
+            top: 0;
+            right: -260px;
+            background: #000;
+            padding: 20px;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
+
+        #sidebar a {
+            color: #fff;
             font-size: 18px;
+            display: block;
+            padding: 10px 0;
             text-decoration: none;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
+        #sidebar a:hover {
+            color: #0d6efd;
         }
 
-        nav ul li a {
+        /* Overlay escuro quando sidebar abre */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            z-index: 9998;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 80px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card {
+            background: #000;
+            padding: 50px;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .hero-img {
+            width: 140%;
+            max-width: 750px;
+            margin-left: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-card {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- OVERLAY -->
+    <div id="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+        <h4 class="mb-4">Menu</h4>
+        <a href="index.html">Início</a>
+        <a href="relatorios.html">Relatórios</a>
+        <a href="observatorio.html">Observatórios</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="contato.html">Contato</a>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-custom d-flex justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="LOGO (1).png">
+        </a>
+        <button class="btn btn-outline-light" id="btn-menu">
+            MENU
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero container-fluid">
+        <div class="row w-100 justify-content-center align-items-center">
+            
+            <div class="col-md-6 d-flex justify-content-center">
+                <img class="hero-img" src="Egn45.png">
+            </div>
+
+            <div class="col-md-6">
+                <div class="hero-card">
+                    <h1 class="fw-bold">Futuros em Seg.<br>Pública e Defesa</h1>
+                    <p class="mt-3">
+                        Cenários, tendências e riscos emergentes.<br>
+                        Prospectiva aplicada para decisões que moldam o amanhã.
+                    </p>
+                    <a href="#" class="btn btn-light mt-3">Saiba Mais</a>
+                </div>
+            </div>
+
+            <style>
+                /* Zera qualquer margem padrão do body */
+                body {
+                    margin: 0;
+                    padding: 0;
+                }
+            
+                .section-qs {
+                    display: flex;
+                    width: 100vw;           /* garante largura total */
+                    min-height: 380px;
+                    margin: 0;
+                    margin-top:40px;
+                }
+            
+                .qs-left {
+                    background: #ffffff;
+                    color: #000;
+                    flex: 1;
+                    padding: 60px 65px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left:-30px;
+                }
+            
+                .qs-left h1 {
+                    font-size: 45px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    line-height: 1.1;
+                }
+            
+                .qs-left .line {
+                    width: 150px;
+                    height: 2px;
+                    background: #000;
+                    margin: 10px 0 25px 0;
+                }
+            
+                .btn-saiba {
+                    background: #001f3f;
+                    color: #fff;
+                    border: none;
+                    padding: 8px 22px;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    width: fit-content;
+                }
+            
+                .btn-saiba:hover {
+                    opacity: .85;
+                }
+            
+                .qs-right {
+                    background: #000000;
+                    color: #ffffff;
+                    flex: 1;
+                    padding: 83px 90px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-right: -30px;
+                }
+            
+                .qs-right h4 {
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+            
+                .qs-right p {
+                    line-height: 1.65;
+                    font-size: 15px;
+                    max-width: 520px;
+                }
+            
+                /* Responsivo */
+                @media (max-width: 900px) {
+                    .section-qs {
+                        flex-direction: column;
+                        width: 100%; /* no mobile o viewport corrige automaticamente */
+                    }
+            
+                    .qs-left, .qs-right {
+                        padding: 40px 25px;
+                    }
+            
+                    .qs-left h1 {
+                        font-size: 36px;
+                    }
+                }
+            </style>
+            
+            <section class="section-qs">
+            
+                <div class="qs-left">
+                    <h1>Quem<br>Somos?</h1>
+                    <div class="line"></div>
+                    <a href ="equipe.html"><button class="btn-saiba">Saiba Mais</button></a>
+                </div>
+            
+                <div class="qs-right">
+                    <h4>Propósito Institucional</h4>
+                    <p>
+                        A Linha de Pesquisa (LP) tem como propósito analisar cenários prospectivos 
+                        em segurança pública e defesa e produzir conhecimento. Atuamos aplicando 
+                        métodos de foresight e/ou análise de cenários às dinâmicas de segurança 
+                        pública e defesa. Nossa atuação é guiada por objetividade, rigor acadêmico 
+                        e metodológico, inovação e princípios que sustentam a credibilidade de 
+                        todas as análises produzidas pela nossa LP.
+                    </p>
+                </div>
+            
+            </section>
+            
+
+        </div>
+    </section>
+
+    <!-- Seção Áreas de Pesquisa -->
+    <section class="py-5" style="background:#000; color:#fff;">
+        <div class="container">
+
+            <h2 class="text-center mb-5 fw-bold">Nossas Áreas de Pesquisa</h2>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://static.wixstatic.com/media/348e20_788ffece1a73476b8be81d4d737823d3~mv2.jpg/v1/fill/w_467,h_295,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/rio-de-janeiro-8.jpg" 
+                            class="card-img-top" 
+                            alt="Segurança Pública">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Segurança Pública</h5>
+                            <p class="card-text">
+                                Segurança Pública é o conjunto de políticas, instituições e ações do Estado 
+                                voltadas para proteger as pessoas, garantir a ordem pública, prevenir crimes 
+                                e preservar a paz social dentro do território nacional.
+                            </p>
+                        </div>
+
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-dark" style="background:#001f3f;">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://static.wixstatic.com/media/348e20_69c5c3c5329f42f3a9a084263ede96a3~mv2.jpg/v1/fill/w_467,h_295,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fuzileiros_navais-7665482.jpg" 
+                            class="card-img-top" 
+                            alt="Defesa Nacional">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Defesa</h5>
+                            <p class="card-text">
+                                Defesa Nacional é o conjunto de ações, políticas, estratégias e meios que o 
+                                Estado brasileiro utiliza para proteger a soberania, o território, a população 
+                                e os interesses nacionais contra ameaças externas.
+                            </p>
+                        </div>
+
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-dark" style="background:#001f3f;">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .section-metodologia {
+            width: 100%;
+            background: #2e2e2e; /* cinza escuro */
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+    
+        .section-metodologia h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    
+        .section-metodologia p {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+    
+        .btn-metodologia {
+            background: #fff;
+            color: #000;
+            padding: 8px 22px;
+            border-radius: 5px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    
+        .btn-metodologia:hover {
+            opacity: 0.85;
+        }
+    
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .section-metodologia h2 {
+                font-size: 30px;
+            }
+    
+            .section-metodologia p {
+                font-size: 14.5px;
+            }
+        }
+    </style>
+    
+    
+    <section class="section-metodologia">
+        <h2>Metodologia</h2>
+    
+        <p>
+            Este trecho servirá para conter um texto com algo falando sobre a metodologia
+            de forma resumida e o botão irá redirecionar o usuário para uma página
+            específica explicando mais detalhes.
+        </p>
+    
+        <button class="btn-metodologia">Saiba Mais</button>
+    </section>
+    
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        /* SEÇÃO GERAL */
+        .section-slider {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .section-slider h2 {
+            font-size: 40px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        /* DIV CINZA CENTRAL */
+        .slider-container-box {
+            width: 95%;
+            max-width: 1350px;
+            background: #2f2f2f;
+            margin: 0 auto;
+            padding: 30px 0;
+            border-radius: 4px;
+        }
+
+        /* SWIPER */
+        .swiper {
+            width: 90%;
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide {
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            text-shadow: 0 0 8px #000;
+        }
+
+        .slide-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            margin-right:60px;
+        }
+
+        .slide-sub {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* BOTÕES DE NAVEGAÇÃO */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .slide-img {
+                height: 200px;
+            }
+        }
+    </style>
+
+
+    <!-- ============================
+        SEÇÃO DO SLIDER
+    =============================== -->
+    <section class="section-slider">
+
+        <h2>Entregáveis</h2>
+
+        <div class="slider-container-box">
+
+            <!-- Swiper Wrapper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- CARD 1 -->
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2177618:1590247881/fotos.jpg?f=default&$p$f=1bca519" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 1</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRybYVochHQ1hSotYg8DssCKQX0-nzmg2abgA&s" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 2</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://www.agencia.marinha.mil.br/sites/default/files/imagem-da-materia/capa_372.jpg" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 3</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <!-- DUPLIQUE A PARTIR DAQUI PARA TER OS 13 CARDS -->
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA_aqdUwVhb3nOvKu3fGH50mSfANeJMUCVPA&s" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 4</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 5</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 6</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 7</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 8</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 9</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 10</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 11</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 12</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="https://via.placeholder.com/600x400" alt="">
+                        <div class="slide-content">
+                            <p class="slide-title">Entregável 13</p>
+                            <p class="slide-sub">Este entregável é um exemplo</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .faixa-branca {
+            width: 100%;
+            height: 70px;            /* altura desejada */
+            background: #ffffff;       /* faixa branca */
+            display: flex;
+            justify-content: center;   /* centraliza horizontal */
+            align-items: center;       /* centraliza vertical */
+        }
+    
+        .faixa-branca img {
+            max-height: 130px;         /* impede que a imagem ultrapasse a faixa */
+            width: auto;
+        }
+    </style>
+    
+    <section class="faixa-branca">
+        <img src="EGN.png" alt="Imagem centralizada" style="width:500px;">
+    </section>
+    
+
+
+    <!-- Bootstrap Icons (para os ícones sociais) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        .footer {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            padding: 50px 40px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-brand img {
+            width: 70px;
+            margin-top: 10px;
+        }
+
+        .footer-brand h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .footer-info p,
+        .footer-info a {
+            margin: 5px 0;
             color: #fff;
             text-decoration: none;
             font-size: 14px;
         }
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Conteúdo principal */
-        .container {
-            padding: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-
-        p {
+        .footer-social i {
             font-size: 18px;
-            max-width: 600px;
-            margin: auto;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .footer-social i:hover {
+            opacity: 0.7;
+        }
+
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsivo */
+        @media (max-width: 900px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: left;
+            }
         }
     </style>
-</head>
 
-<body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a class="logo" href="index.html">Meu Site</a>
+    <!-- =====================
+            FOOTER
+    ===================== -->
+    <footer class="footer">
 
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+        <div class="footer-container">
 
-    <!-- CONTEÚDO -->
-    <div class="container">
-        <h1>Bem-vindo ao Meu Site!</h1>
-        <p>
-            Este é um site simples criado para demonstrar como usar múltiplas páginas no GitHub Pages.
-            Você pode navegar pelo menu acima para testar as outras páginas.
-        </p>
-    </div>
+            <!-- COLUNA 1 - Marca -->
+            <div class="footer-brand">
+                <h3>laboratorio</h3>
+                <a href="index.html">
+                <img src="LOGO (1).png" alt="logo">
+                </a>
+            </div>
+
+            <!-- COLUNA 2 - Informações -->
+            <div class="footer-info">
+
+                <p>email@exemplo.com</p>
+
+                <p>
+                    Av. Pasteur, 480 - Urca,<br>
+                    Rio de Janeiro - RJ
+                </p>
+
+                <div class="footer-social">
+                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+
+            <!-- COLUNA 3 - Políticas -->
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Declaração de acessibilidade</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                600: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+    <script>
+        // ABRIR SIDEBAR
+        $("#btn-menu").click(function () {
+            $("#sidebar").css("right", "0");
+            $("#overlay").fadeIn();
+        });
+
+        // FECHAR SIDEBAR AO CLICAR FORA
+        $("#overlay").click(function () {
+            $("#sidebar").css("right", "-260px");
+            $("#overlay").fadeOut();
+        });
+    </script>
 
 </body>
 </html>
